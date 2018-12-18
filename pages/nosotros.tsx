@@ -1,10 +1,11 @@
-import { Navigation } from "../components/";
+import Layout from '../components/Layout';
 
 const Nosotros = () => (
-    <div>
-        <Navigation />
-        <p>Hola desde nosotros</p>
-    </div>
+    <Layout>
+        <div>
+            <p>Hola desde nosotros</p>
+        </div>
+    </Layout>
 );
 
 export default Nosotros;
