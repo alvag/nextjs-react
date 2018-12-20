@@ -1,11 +1,14 @@
 import axios from 'axios';
 
 import Layout from '../components/Layout';
-import { Price } from '../components/modules';
+import { Price, News } from '../components/modules';
 import { Constants } from '../Constants';
+import { INews } from '../Interfaces';
+import Utils from '../Utils';
 
 interface IProps {
     bitcoin: any;
+    news: INews[];
 }
 
 const Index = (props: IProps) => (
@@ -18,6 +21,7 @@ const Index = (props: IProps) => (
 
             <div className="col-md-8">
                 <h2>Noticias sobre Bitcoin</h2>
+                <News news={props.news} />
             </div>
 
             <div className="col-md-4">
@@ -29,9 +33,11 @@ const Index = (props: IProps) => (
 
 Index.getInitialProps = async () => {
     const response = await axios.get(Constants.COINMARKET_API)
+    const news = await Utils.getNews();
 
     return {
-        bitcoin: response.data.data.quotes.USD
+        bitcoin: response.data.data.quotes.USD,
+        news
     }
 }
 
