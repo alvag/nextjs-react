@@ -18,8 +18,9 @@
         "styled-jsx": "^3.1.2"
     },
     "scripts": {
-        "start": "next",
-        "build": "react-app-env --env-file=.env build",
+        "dev": "next",
+        "start": "next start",
+        "build": "next build & next export",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
