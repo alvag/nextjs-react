@@ -1,14 +1,19 @@
 import axios from 'axios';
 
 import Layout from '../components/Layout';
+import { Price } from '../components/modules';
 import { Constants } from '../Constants';
 
-const Index = (props: any) => (
+interface IProps {
+    bitcoin: any;
+}
+
+const Index = (props: IProps) => (
     <Layout>
-        {console.log(props)}
         <div className="row">
             <div className="col-12">
                 <h2>Precio del Bitcoin</h2>
+                <Price bitcoin={props.bitcoin} />
             </div>
 
             <div className="col-md-8">

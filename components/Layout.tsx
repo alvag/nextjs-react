@@ -14,7 +14,7 @@ const Layout = (props: any) => {
 
             <Navigation />
 
-            <div className="container mt-4">
+            <div className="container">
                 {props.children}
             </div>
         </div>
