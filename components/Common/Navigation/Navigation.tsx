@@ -11,7 +11,7 @@ const Navigation = () => {
                             <Link href="/"><a className="nav-link">Inicio</a></Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/nosotros"><a className="nav-link">Nosotros</a></Link>
+                            <Link prefetch as={'mi-super-ruta.html'} href="/nosotros"><a className="nav-link">Nosotros</a></Link>
                         </li>
                         <li className="nav-item">
                             <Link href="/contacto"><a className="nav-link">Contacto</a></Link>

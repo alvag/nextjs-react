@@ -26,3 +26,5 @@ yarn-error.log*
 
 # Nextjs
 .next/
+.idea/
+out/

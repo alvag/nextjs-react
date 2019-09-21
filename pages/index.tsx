@@ -32,6 +32,7 @@ const Index = (props: IProps) => (
 );
 
 Index.getInitialProps = async () => {
+    console.log(process.env);
     const response = await axios.get(Constants.COINMARKET_API)
     const news = await Utils.getNews();
 
